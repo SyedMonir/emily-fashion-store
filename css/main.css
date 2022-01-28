@@ -1,17 +1,140 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Top Nav  */
+/* Common  */
+html:focus-within {
+    scroll-behavior: smooth;
+}
 
-#top-nav h6{
+.brand-clr {
+    color: #f74c70;
+}
+
+/* Top Nav  */
+#top-nav {
+    background-color: black;
+}
+
+.welcome-msg {
+    margin: .5rem 0;
+}
+
+#top-nav h6 {
     line-height: 2rem;
 }
 
-@media screen and (max-width:576px){
-    #top-nav button{
-        content: " * ";
+#top-nav .dropdown-menu {
+    padding: 0.3rem 0;
+}
+
+#top-nav .dropdown-divider {
+    margin: 0.3rem 0;
+}
+
+.zIndex {
+    z-index: 1211;
+}
+
+/* Main Navbar */
+.navigation {
+    background-color: white;
+}
+
+.navigation.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+}
+
+.navigation.navbar {
+    padding: 0;
+}
+
+.navigation {
+    position: sticky;
+    top: 0;
+}
+
+.navigation.navbar-light .navbar-nav .nav-item.active .nav-link,
+.navigation.navbar-light .navbar-nav .nav-item .nav-link:hover {
+    color: #f74c70;
+    transition: all .3s;
+}
+
+.navigation .nav-item .btn {
+    padding: 0;
+    line-height: 1rem;
+}
+
+
+.btn .badge {
+    top: -10px;
+}
+
+.rounded-pill {
+    background-color: #f74c70;
+}
+
+/* Nested Menu  */
+.nested-menu {
+    width: 50vw;
+}
+
+.nested-menu .dropdown-item:hover {
+    transform: translateX(10px);
+    transition: all .3s;
+}
+
+
+/* Scroll To Top  */
+.scrollToTop {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 8px solid #f74c70;
+    bottom: 5%;
+    right: 2%;
+    animation: blink 1.2s ease-in-out infinite .3s;
+    box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+
+
+
+@media screen and (max-width:576px) {
+
+    /* Top Nav  */
+    #top-nav p {
+        font-size: .8rem;
+    }
+
+    /* Nested Menu  */
+    .nested-menu {
+        width: 70vw;
+    }
+
+    /* Scroll To Top  */
+    .scrollToTop {
+        right: 3.5%;
+    }
+}
+
+/* Main Navbar */
+@media screen and (max-width:769px) {
+    .navigation {
+        padding: 12px 0;
     }
 }

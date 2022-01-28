@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --brand-clr: #f74c70;
+}
+
 /* Common  */
 html:focus-within {
     scroll-behavior: smooth;
 }
 
 .brand-clr {
-    color: #f74c70;
+    color: var(--brand-clr);
 }
 
 /* Top Nav  */
@@ -59,7 +63,7 @@ html:focus-within {
 
 .navigation.navbar-light .navbar-nav .nav-item.active .nav-link,
 .navigation.navbar-light .navbar-nav .nav-item .nav-link:hover {
-    color: #f74c70;
+    color: var(--brand-clr);
     transition: all .3s;
 }
 
@@ -74,7 +78,7 @@ html:focus-within {
 }
 
 .rounded-pill {
-    background-color: #f74c70;
+    background-color: var(--brand-clr);
 }
 
 /* Nested Menu  */
@@ -82,10 +86,38 @@ html:focus-within {
     width: 50vw;
 }
 
-.nested-menu .dropdown-item:hover {
-    transform: translateX(10px);
-    transition: all .3s;
+.nested-imgOne {
+    margin-bottom: 10px;
 }
+
+.nested-img img {
+    height: 100px;
+    width: 100%;
+    padding-right: 10px;
+    background-size: cover;
+}
+
+.nested-menu-kid {
+    width: 45vw;
+}
+
+.nested-menu .dropdown-item:hover {
+    color: var(--brand-clr);
+    transform: translateX(10px);
+    transition: all .4s;
+}
+
+
+
+/* Carousel  */
+#carouselExampleFade .carousel-item img{
+    height: 500px;
+}
+
+
+
+
+
 
 
 /* Scroll To Top  */
@@ -94,7 +126,7 @@ html:focus-within {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 8px solid #f74c70;
+    border: 8px solid var(--brand-clr);
     bottom: 5%;
     right: 2%;
     animation: blink 1.2s ease-in-out infinite .3s;

@@ -6,3 +6,7 @@ function scrollToTop(){
         behavior: 'smooth'
     })
 }
+
+
+// New Arrival
+

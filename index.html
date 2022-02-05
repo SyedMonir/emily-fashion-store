@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <title>Emily - Fashion Store</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -34,11 +35,12 @@
                         <div class="dropdown ms-auto ">
                             <button class="btn text-white btn-sm dropdown-toggle" type="button" id="dropdownMenuButton2"
                                 data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                                My Account
+                                <i class="me-1 fas fa-user"></i>
+                                User Name
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                                 <li><a class="dropdown-item active" href="#">
-                                    <i class="me-1 fas fa-user"></i>
+                                        <i class="me-1 fas fa-user"></i>
                                         User Name
                                     </a>
                                 </li>
@@ -68,7 +70,7 @@
                         </div>
 
                         <!-- Language  -->
-                        <div class="dropdown ">
+                        <div class="language dropdown ">
                             <button class="btn text-white btn-sm dropdown-toggle" type="button" id="dropdownMenuButton2"
                                 data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                                 <img src="./img/icons/united_states_flag_usa_united states_icon.png" width="25"
@@ -217,84 +219,386 @@
 
 
     <!-- CAROUSEL  -->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
+    <div id="mainCarousel">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-lg-4 col-md-6 ms-md-3  mt-2">
-                            <img src="./img/carousel/model-1.png" class="img-fluid d-block w-100 h-80" alt="...">
-                        </div>
-                        <div class="carousel-caption text-start col-lg-8 col-md-6 mt-2">
-                            <h3>This Autumn</h3>
-                            <h4>COLLECTION</h4>
-                            <h2>FASHION STREET <span>2022</span></h2>
-                            <h5>25 World Famous Brands</h5>
-                            <button type="button" class="btn  px-5">Shop Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="carousel-caption text-start col-lg-8 col-md-6 mt-2">
-                            <h3>This Autumn</h3>
-                            <h4>COLLECTION</h4>
-                            <h2>FASHION STREET <span>2022</span></h2>
-                            <h5>25 World Famous Brands</h5>
-                            <button type="button" class="btn  px-5">Shop Now</button>
-                        </div>
-                        <div class="col-lg-4 col-md-6 ms-md-3 mt-2">
-                            <img src="./img/carousel/model-2.png" class="img-fluid d-block w-100 h-80" alt="...">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-6 ms-md-3  mt-2">
+                                <img src="./img/carousel/model-1.png" class="img-fluid d-block w-100 h-80" alt="...">
+                            </div>
+                            <div class="carousel-caption text-start col-lg-8 col-md-6 mt-2">
+                                <h3>This Autumn</h3>
+                                <h4>COLLECTION</h4>
+                                <h2>FASHION STREET <span>2022</span></h2>
+                                <h5>25 World Famous Brands</h5>
+                                <button type="button" class="btn  px-5">Shop Now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 ms-md-3 mt-2">
-                            <img src="./img/carousel/model-1.png" class="img-fluid d-block w-100 h-80" alt="...">
-                        </div>
-                        <div class="carousel-caption text-start col-lg-8 col-md-6 mt-2">
-                            <h3>This Autumn</h3>
-                            <h4>COLLECTION</h4>
-                            <h2>FASHION STREET <span>2022</span></h2>
-                            <h5>25 World Famous Brands</h5>
-                            <button type="button" class="btn  px-5">Shop Now</button>
-                        </div>
 
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="carousel-caption text-start col-lg-8 col-md-6 mt-2">
+                                <h3>This Autumn</h3>
+                                <h4>COLLECTION</h4>
+                                <h2>FASHION STREET <span>2022</span></h2>
+                                <h5>25 World Famous Brands</h5>
+                                <button type="button" class="btn  px-5">Shop Now</button>
+                            </div>
+                            <div class="col-lg-4 col-md-6 ms-md-3 mt-2">
+                                <img src="./img/carousel/model-2.png" class="img-fluid d-block w-100 h-80" alt="...">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 ms-md-3 mt-2">
+                                <img src="./img/carousel/model-1.png" class="img-fluid d-block w-100 h-80" alt="...">
+                            </div>
+                            <div class="carousel-caption text-start col-lg-8 col-md-6 mt-2">
+                                <h3>This Autumn</h3>
+                                <h4>COLLECTION</h4>
+                                <h2>FASHION STREET <span>2022</span></h2>
+                                <h5>25 World Famous Brands</h5>
+                                <button type="button" class="btn  px-5">Shop Now</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    </div>
+
+
+    <!-- Support Section  -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center ">
+                <div class="support-img">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <div class="support-text ms-3">
+                    <h4>Free Shipping</h4>
+                    <p>Apply for larger order $200</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center my-sm-3 my-3">
+                <div class="support-img">
+                    <i class="fab fa-btc px-1"></i>
+                </div>
+                <div class="support-text ms-3">
+                    <h4>100% Money Back</h4>
+                    <p>Charisma is the moto of our work</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center ">
+                <div class="support-img">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="support-text ms-3">
+                    <h4>Support 24/7</h4>
+                    <p>+8801988-512131</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- New Arrival Section -->
+    <section id="newArrival" class="container mb-5">
+        <div class="row justify-content-between">
+            <div class="col-lg-4">
+                <div class="newArrival-title ">
+                    <h2 class="text-uppercase">New Arrival</h2>
+                </div>
+            </div>
+            <div class="col-2 position-relative">
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <!-- <i class="fa fa-angle-left"></i> -->
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fas fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 ">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid" alt="Cfg Armani Green">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Cfg Armani Green</h4>
+                                            <p class="item-price"> <del>$400</del> <span>$369.00</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid"
+                                                alt="Cfg Armani Black">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Cfg Armani Black</h4>
+                                            <p class="item-price"><del>$25.00</del> <span>$23.99</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid"
+                                                alt="Cfg Armani Blue">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Cfg Armani Blue</h4>
+                                            <p class="item-price"><del>$899.00</del> <span>$649.00</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 py-3 px-4 ">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid"
+                                                alt="Configurable Product">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Configurable Product</h4>
+                                            <p class="item-price"><del>$315.00</del> <span>$250.00</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt"></i></li>
+                                                    <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="row">
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modal3.png" class="img-fluid"
+                                                alt="Configurable Product">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Configurable Product</h4>
+                                            <p class="item-price"><del>$289.00</del> <span>$269.00</span></p>
+                                            
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt"></i></li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid"
+                                                alt="Cfg Armani Black">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Cfg Armani Black</h4>
+                                            <p class="item-price"><del>$1099.00</del> <span>$869.00</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid"
+                                                alt="Cfg Armani Blue">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Cfg Armani Blue</h4>
+                                            <p class="item-price"><del>$109.00</del> <span>$99.00</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="far fa-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 py-3 px-4">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="./img/modals/modals-1.jpg" class="img-fluid"
+                                                alt="Cfg Armani Green">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>Cfg Armani Green</h4>
+                                            <p class="item-price"><del>$599.00</del> <span>$569.00</span></p>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fas fa-star-half-alt"></i></li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Scroll To Top -->
+    <div class="container position-relative">
+        <div class="scrollToTop text-center zIndex">
+            <p class="my-1" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up brand-clr "></i>
+            </p>
+        </div>
     </div>
 
 
 
-
-    <div class="scrollToTop text-center zIndex">
-        <p class="my-1" onclick="scrollToTop()">
-            <i class="fas fa-arrow-up brand-clr "></i>
-        </p>
-    </div>
-
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".wish-icon i").click(function () {
+                $(this).toggleClass("fa-heart fa-heart-o");
+            });
+        });	
+    </script>
 
 
     <!-- Bootstrap JS  -->

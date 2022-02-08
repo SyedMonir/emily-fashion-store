@@ -9,25 +9,51 @@ function scrollToTop() {
 
 
 // New Arrival
+// Wish Icons 
 
-{/* <span class="wish-icon"><i class="fa fa-heart-o"></i></span> */ }
-document.g
+const wishIcons = document.getElementsByClassName('wish-icon');
+for (const wishIcon of wishIcons) {
+    wishIcon.addEventListener('click', function () {
+        wishIcon.innerHTML = `<i class="fas fa-heart"></i>`;
+    })
+}
 
-$(document).ready(function () {
-    $(".wish-icon i").click(function () {
-        $(this).toggleClass("fas fa-heart");
-    });
-});
 
 
 
 // Slick Carousel 
 $(function () {
-    $('.blog-slider').slick({
+    $('.new-arrival').slick({
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
+        // autoplay: true,
         prevArrow: '<span class="priv-arrow"><i class=" fas fa-angle-left"></i></span>',
-        nextArrow: '<span class="next-arrow"><i class=" fas fa-angle-right"></i></span>'
+        nextArrow: '<span class="next-arrow"><i class=" fas fa-angle-right"></i></span>',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });

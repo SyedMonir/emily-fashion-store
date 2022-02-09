@@ -42,6 +42,185 @@ html:focus-within {
 }
 
 
+/* Titles  */
+.titles h2 {
+    font-size: 33px;
+    font-weight: 700;
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 0;
+}
+
+.titles h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    bottom: auto;
+    width: 40px;
+    height: 3px;
+    background: #000;
+    margin: auto;
+}
+
+
+/* Rating  */
+/* .rating {
+    font-size: 0;
+}
+
+.rating span {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.rating span:not(:last-child){
+    margin-right: 7px;
+}
+
+.rating span::before {
+    content: "☆";
+    color: gold;
+}
+
+.rating span.active::before {
+    content: "★";
+    color: gold;
+}
+
+.rating span:hover {
+    cursor: pointer;
+} */
+
+/* 
+.star-container {
+    display: flex;
+    width: 100px;
+    flex-direction: row-reverse;
+}
+
+
+.star {
+    content: '\f005';
+    font-family: fontAwesome;
+    font-size: 20px;
+    position: relative;
+    display: block;
+    color: rgb(250, 11, 51);
+}
+
+.star::before {
+    color: rgb(250, 11, 51);
+}
+
+.star:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    /* position: absolute;
+    top: 0;
+    font-size: 20px;
+    color: gold;
+    opacity: 0;
+}
+
+.star:hover:after,
+.star:hover~.star:after {
+    opacity: 1;
+}
+
+.star__checked~.star:after {
+    opacity: 1;
+}
+ */
+
+
+
+.rating {
+    --fill: gold;
+    --fillbg: rgba(100, 100, 100, 0.15);
+    --heart: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.328l-1.453-1.313q-2.484-2.25-3.609-3.328t-2.508-2.672-1.898-2.883-0.516-2.648q0-2.297 1.57-3.891t3.914-1.594q2.719 0 4.5 2.109 1.781-2.109 4.5-2.109 2.344 0 3.914 1.594t1.57 3.891q0 1.828-1.219 3.797t-2.648 3.422-4.664 4.359z"/></svg>');
+    --star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
+    --stars: 5;
+    --starsize: 1.5rem;
+    --symbol: var(--star);
+    --value: 1;
+    --w: calc(var(--stars) * var(--starsize));
+    --x: calc(100% * (var(--value) / var(--stars)));
+    block-size: var(--starsize);
+    inline-size: var(--w);
+    position: relative;
+    touch-action: manipulation;
+    -webkit-appearance: none;
+}
+
+
+
+.rating::-moz-range-track {
+    background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+    block-size: 100%;
+    mask: repeat left center/var(--starsize) var(--symbol);
+}
+
+.rating::-webkit-slider-runnable-track {
+    background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+    block-size: 100%;
+    mask: repeat left center/var(--starsize) var(--symbol);
+    -webkit-mask: repeat left center/var(--starsize) var(--symbol);
+}
+
+.rating::-moz-range-thumb {
+    height: var(--starsize);
+    opacity: 0;
+    width: var(--starsize);
+}
+
+.rating::-webkit-slider-thumb {
+    height: var(--starsize);
+    opacity: 0;
+    width: var(--starsize);
+    -webkit-appearance: none;
+}
+
+.rating,
+.rating-label {
+    display: block;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.rating-label {
+    margin-block-end: 1rem;
+}
+
+/* NO JS */
+.rating--nojs::-moz-range-track {
+    background: var(--fillbg);
+}
+
+.rating--nojs::-moz-range-progress {
+    background: var(--fill);
+    block-size: 100%;
+    mask: repeat left center/var(--starsize) var(--star);
+}
+
+.rating--nojs::-webkit-slider-runnable-track {
+    background: var(--fillbg);
+}
+
+.rating--nojs::-webkit-slider-thumb {
+    background-color: var(--fill);
+    box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
+    opacity: 1;
+    width: 1px;
+}
+
+
+
+
+
+
+
+
+
 /* Top Nav  */
 #top-nav {
     background-color: black;
@@ -216,7 +395,8 @@ html:focus-within {
     text-align: center;
     transition: .3s;
 }
-.support-img:hover{
+
+.support-img:hover {
     color: #fff;
     background: #f74c70;
 }
@@ -234,52 +414,47 @@ html:focus-within {
 
 
 
-/* New Arrival Section  */
-#newArrival .newArrival-title h2 {
-    font-size: 33px;
-    font-weight: 700;
-    position: relative;
-    margin-left: 50px;
-    margin-bottom: 0;
-}
-
-#newArrival .newArrival-title h2::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    bottom: auto;
-    width: 40px;
-    height: 2px;
-    background: #000;
-    margin: auto;
-}
+/* New Arrival Section  &&&    Most Reviewed Section */
 
 
-
-#newArrival .slider-item {
+#newArrival .slider-item,
+#mostReviewed .slider-item {
     margin: 10px;
     border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+#newArrival .slider-item:hover,
+#mostReviewed .slider-item:hover {
+    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22); */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
-#newArrival .slider-content {
-    padding: 0 10px;
+#newArrival .slider-content,
+#mostReviewed .slider-content {
+    padding: 5px 10px;
+    margin: 15px 0;
+    
 }
 
-#newArrival .slider-content h4 {
+#newArrival .slider-content h4,
+#mostReviewed .slider-content h4 {
     font-size: 18px;
     color: #000;
 }
 
-#newArrival .img-box {
+#newArrival .img-box,
+#mostReviewed .img-box {
     /* height: 320px; */
     margin-bottom: 20px;
     /* width: 100%; */
     position: relative;
 }
 
-#newArrival .img-box .new {
+#newArrival .img-box .new,
+#mostReviewed .img-box .new {
     position: absolute;
     background-color: #7ac400;
     color: #fff;
@@ -289,7 +464,8 @@ html:focus-within {
     font-size: 12px;
 }
 
-#newArrival .img-box .discount {
+#newArrival .img-box .discount,
+#mostReviewed .img-box .discount {
     position: absolute;
     background-color: #000;
     color: #fff;
@@ -300,19 +476,22 @@ html:focus-within {
 }
 
 
-#newArrival .img-box img {
+#newArrival .img-box img,
+#mostReviewed .img-box img {
     height: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
     border-radius: 10px;
 }
 
-#newArrival .img-box img:hover {
+#newArrival .img-box img:hover,
+#mostReviewed .img-box img:hover {
     transform: scale(1.1);
     overflow: hidden;
 }
 
-#newArrival img {
+#newArrival img,
+#mostReviewed img {
     /* max-width: 100%; */
     width: 100%;
     max-height: 100%;
@@ -324,7 +503,8 @@ html:focus-within {
     right: 0;
 }
 
-#newArrival .wish-icon {
+#newArrival .wish-icon,
+#mostReviewed .wish-icon {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -335,7 +515,8 @@ html:focus-within {
     color: #f3130b;
 }
 
-#newArrival .wish-icon .fa-heart {
+#newArrival .wish-icon .fa-heart,
+#mostReviewed .wish-icon .fa-heart {
     color: #ff6161;
     z-index: 99999999999;
 }
@@ -344,22 +525,28 @@ html:focus-within {
 
 #newArrival .item h4,
 #newArrival .item p,
-#newArrival .item ul {
+#newArrival .item ul,
+#mostReviewed .item h4,
+#mostReviewed .item p,
+#mostReviewed .item ul {
     margin-bottom: 5px;
 }
 
 
-#newArrival .item-price {
+#newArrival .item-price,
+#mostReviewed .item-price {
     font-size: 15px;
     padding: 2px 0;
 }
 
-#newArrival .item-price del {
+#newArrival .item-price del,
+#mostReviewed .item-price del {
     opacity: 0.7;
     margin-right: 5px;
 }
 
-#newArrival .item-price span {
+#newArrival .item-price span,
+#mostReviewed .item-price span {
     font-weight: bold;
     color: #f74c70;
 }
@@ -516,16 +703,35 @@ html:focus-within {
 #discount {
     position: relative;
 }
+
 #discount .background {
     position: absolute;
-    top: 70px;
+    top: 67px;
     left: 0;
     margin: 0 auto;
     width: 100%;
-    height: 80%;
-    background-color: #ddd;
+    height: 82%;
+    background-color: #ddddddcc;
     z-index: -9999;
 }
+
+
+#discount img {
+    position: relative;
+    animation-duration: 1.5s;
+}
+
+#discount .percent50 {
+    position: absolute;
+    font-size: 15rem;
+    font-weight: 800;
+    color: white;
+    top: 18%;
+    left: 5%;
+    animation-iteration-count: 3;
+    animation-duration: 1.5s;
+}
+
 
 #discount .save50 {
     margin-bottom: 0;
@@ -548,7 +754,38 @@ html:focus-within {
 
 
 
+/* Most Reviewed        &&&&&&         Isotope Carousel */
 
+#mostReviewed .mostReviewedLinks {
+    margin-bottom: 10px;
+}
+
+#mostReviewed .mostReviewedProducts img {
+    width: 100%;
+    height: 100%;
+}
+
+#mostReviewed .mostReviewedProducts img:hover {
+    background-color: orange;
+}
+
+#mostReviewed .mostReviewedLinks .col-md-3 {
+    margin: 10px;
+}
+
+#mostReviewed .mostReviewedLinks .nav-link {
+    font-size: .9rem;
+    color: #000;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+#mostReviewed .mostReviewedLinks .slash::after {
+    margin-left: 15px;
+    content: '\2f';
+}
 
 
 

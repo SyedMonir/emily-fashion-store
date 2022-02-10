@@ -6,198 +6,190 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+    <style>
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            background: #DDFFE8;
+        }
+
+        .chat-bubble {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            bottom: 2em;
+            right: 2em;
+            border-radius: 100%;
+            background: url("https://c1.staticflickr.com/9/8552/9023949498_c7eb673297_b.jpg") no-repeat;
+            /* background: url("./img/logoAndFavicon/small-logo.png") no-repeat; */
+            background-size: 100%;
+            /* background-position: center; */
+            /* background-position: 50% 50%; */
+            width: 4em;
+            height: 4em;
+            transition: all 0.25s;
+        }
+
+        .chat-bubble .status {
+            position: absolute;
+            height: 1em;
+            width: 1em;
+            border-radius: 100%;
+            background: #4DFF00;
+            right: 0;
+            top: 0;
+            border: 2px solid #FFF;
+        }
+
+        .chat-bubble-hover,
+        .chat-bubble:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            border: solid 4px #4DFF00;
+            box-shadow: 0px 15px 10px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-bubble-hover .status,
+        .chat-bubble:hover .status {
+            border: none;
+        }
+
+        .chat-box {
+            position: absolute;
+            right: 2%;
+            top: 2%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            height: 25em;
+            min-width: 20em;
+            padding: 0.1em;
+            background: #FFF;
+            transition: all 1s;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px 1px rgba(53, 127, 115, 0.8);
+        }
+
+        .chat-box .messages {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-end;
+            margin: auto;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            height: 77%;
+            width: 95%;
+            background: linear-gradient(transparent, rgba(128, 212, 158, 0.2));
+            /* padding: 10px; */
+        }
+
+        .chat-box .messages .msg {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            margin: 0.3em 1em;
+            height: 25px;
+            font-weight: bold;
+        }
+
+        .chat-box .input-holder {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            background: linear-gradient(90deg, #f74c70, #f02853);
+            height: 15%;
+            border-radius: 5px;
+            width: 97%;
+            margin: auto;
+        }
+
+        .chat-box .input-holder .control {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .chat-box .input-holder .control .chat-input {
+            height: 70%;
+            /* background: #65d78e; */
+            width: 60%;
+            border-radius: 5px;
+            margin: auto ;
+            border: none;
+            padding: 0 0.5em 0 0.5em;
+            transition: all 0.7s;
+            color: #FFF;
+        }
+
+        .chat-box .input-holder .control .chat-input:focus {
+            /* background: #b6ecc9; */
+            outline: none;
+            color: #000;
+        }
+
+        .chat-box .input-holder .control .chat-btn {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 70%;
+            margin: auto;
+            background: #f74c70;
+            border: none;
+            text-align: center;
+            color: #FFF;
+            transition: all 0.25s;
+            border-radius: 2px;
+        }
+
+        .chat-box .input-holder .control .chat-btn:hover {
+            background: #fff;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .chat-box .input-holder .control .chat-btn:focus {
+            outline: none;
+        }
+
+        .chat-box.hide {
+            top: -27.5em;
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Carousel wrapper -->
-    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
-        <!-- Controls -->
-        <div class="d-flex justify-content-center mb-4">
-            <button class="carousel-control-prev position-relative" type="button"
-                data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next position-relative" type="button"
-                data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- Inner -->
-
-        
-        <div class="carousel-inner py-4">
-            <!-- Single item -->
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
-                                    class="card-img-top" alt="Waterfall" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 d-none d-lg-block">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-                                    class="card-img-top" alt="Sunset Over the Sea" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 d-none d-lg-block">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp"
-                                    class="card-img-top" alt="Sunset over the Sea" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single item -->
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
-                                    class="card-img-top" alt="Fissure in Sandstone" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 d-none d-lg-block">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
-                                    class="card-img-top" alt="Storm Clouds" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 d-none d-lg-block">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
-                                    class="card-img-top" alt="Hot Air Balloons" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single item -->
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
-                                    class="card-img-top" alt="Peaks Against the Starry Sky" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 mb-4 mb-lg-0 d-none d-lg-block">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
-                                    class="card-img-top" alt="Bridge Over Water" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 mb-4 mb-lg-0 d-none d-lg-block">
-                            <div class="card">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
-                                    class="card-img-top" alt="Purbeck Heritage Coast" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        Some quick example text to build on the card title and make up the bulk
-                                        of the card's content.
-                                    </p>
-                                    <a href="#!" class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Inner -->
+    <div class="chat-bubble">
+        <div class="msgs"> </div>
+        <div class="status"></div>
     </div>
-    <!-- Carousel wrapper -->
+    <div class="chat-box hide">
+        <div class="messages">
+            <div class="msg">EMILY : How can I help you?</div>
+        </div>
+        <div class="input-holder">
+            <div class="control">
+                <input class="chat-input" type="text" />
+                <button class="chat-btn">Send</button>
+            </div>
+        </div>
+    </div>
 
-
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(".chat-bubble").click(function () {
+            $(".chat-box").toggleClass("hide");
+            $(".chat-bubble").toggleClass("chat-bubble-hover");
+        });
+    </script>
 </body>
 
 </html>

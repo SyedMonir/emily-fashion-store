@@ -118,7 +118,7 @@ html:focus-within {
 }
 
 .rating-label {
-    margin-block-end: 1rem;
+    margin-block-end: .5rem;
 }
 
 /* NO JS */
@@ -254,6 +254,9 @@ html:focus-within {
 
 #mainCarousel #carouselExampleFade .carousel-item img {
     height: 70vh;
+    background-position: center;
+    background-size: cover;
+    /* background-origin: content-box; */
 }
 
 #mainCarousel #carouselExampleFade .carousel-caption {
@@ -285,7 +288,7 @@ html:focus-within {
 
 /* Animate Button  */
 .wrapper {
-    width: 25%;
+    width: 191px;
     margin: 0;
 }
 
@@ -331,7 +334,8 @@ html:focus-within {
 
 .wrapper span:nth-child(2) {
     width: 20px;
-    margin-left: 30px;
+    height: 30px;
+    margin-left: 5px;
     position: relative;
     top: 12%;
 }
@@ -448,10 +452,11 @@ path.two {
 
 #newArrival .slider-item,
 #mostReviewed .slider-item {
-    margin: 10px;
+    margin: 6px;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
 }
 
 #newArrival .slider-item:hover,
@@ -485,12 +490,29 @@ path.two {
 #newArrival .img-box .new,
 #mostReviewed .img-box .new {
     position: absolute;
-    background-color: #7ac400;
+    background-color: green;
     color: #fff;
     left: 0;
     bottom: 0;
-    padding: 1px 8px;
+    padding: 1px 3px 1px 10px;
     font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    display: inline-block;
+    font-family: 'Merriweather', serif;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+
+    to {
+        -webkit-mask-position: -50%;
+    }
 }
 
 #newArrival .img-box .discount,
@@ -498,7 +520,7 @@ path.two {
     position: absolute;
     background-color: #000;
     color: #fff;
-    left: 45px;
+    left: 60px;
     bottom: 0;
     padding: 1px 8px;
     font-size: 12px;
@@ -537,7 +559,7 @@ path.two {
     position: absolute;
     right: 10px;
     top: 10px;
-    z-index: 99999999999;
+    z-index: 9;
     cursor: pointer;
     font-size: 16px;
     /* color: #abb0b8; */
@@ -547,7 +569,7 @@ path.two {
 #newArrival .wish-icon .fa-heart,
 #mostReviewed .wish-icon .fa-heart {
     color: #ff6161;
-    z-index: 99999999999;
+    /* z-index: ; */
 }
 
 
@@ -638,14 +660,6 @@ path.two {
     content: '';
 }
 
-/* .star-rating li {
-    padding: 0;
-}
-
-.star-rating i {
-    font-size: 14px;
-    color: #ffc000;
-} */
 
 
 .new-arrival {
@@ -654,7 +668,7 @@ path.two {
 
 .new-arrival .priv-arrow {
     position: absolute;
-    top: -86px;
+    top: -56px;
     right: 40px;
     color: rgb(182, 182, 182);
     font-size: 25px;
@@ -665,7 +679,7 @@ path.two {
 
 .new-arrival .next-arrow {
     position: absolute;
-    top: -86px;
+    top: -56px;
     right: 13px;
     color: rgb(182, 182, 182);
     font-size: 25px;
@@ -703,11 +717,12 @@ path.two {
     margin-right: 10px;
 }
 
-.new-arrival-section .new-arrival .slider-content p {
+.new-arrival-section .new-arrival .slider-content p,
+#mostReviewed .slider-content p {
     font-size: 14px;
     font-weight: 500;
     color: #2b2626;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .new-arrival-section .new-arrival .slider-content a {
@@ -757,14 +772,99 @@ path.two {
     color: white;
     top: 18%;
     left: 5%;
-    animation-iteration-count: 3;
+    animation-iteration-count: 5;
     animation-duration: 1.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.14, .75, .2, 1.01);
+}
+
+#discount .percent50.percent50Active {
+    animation-name: bounceInPercent;
+    animation-delay: .3s;
+}
+
+@keyframes bounceInPercent {
+    0%, 20%, 53%, 80%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transform: translateZ(0);
+    }
+
+    40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+
+
+.reveal {
+    /* position: relative; */
+    opacity: 0;
+    /* transition: 1s all ease; */
+}
+
+.reveal.active {
+    animation-name: bounceFromLeft;
+    animation-delay: .3s;
+    opacity: 1;
+}
+
+@keyframes bounceFromLeft {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+
+    0% {
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        opacity: 0;
+        transform: translate3d(-3000px, 0, 0);
+    }
+
+    60% {
+        -webkit-transform: translate3d(25px, 0, 0);
+        opacity: 1;
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
 }
 
 
 #discount .save50 {
     margin-bottom: 0;
     font-size: 1.4rem;
+
 }
 
 #discount h1 {
@@ -824,15 +924,30 @@ path.two {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 8px solid var(--brand-clr);
-    bottom: 5%;
+    background-color: var(--brand-clr);
+    /* border: 7px solid var(--brand-clr); */
+    bottom: 10%;
     right: 2%;
-    animation: blink 1.2s ease-in-out infinite .3s;
+    /* animation: blink 1.2s ease-in-out infinite .3s; */
     box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
     cursor: pointer;
+    transition: ball .3s;
 }
 
-@keyframes blink {
+.scrollToTop i{
+    color: #fff;
+    margin-top: 12px;
+}
+
+.scrollToTop:hover {
+    background-color: #000;
+    
+}
+.scrollToTop:hover i{
+    color: #fff;
+}
+
+/* @keyframes blink {
     0% {
         transform: scale(1);
     }
@@ -840,7 +955,7 @@ path.two {
     100% {
         transform: scale(1.4);
     }
-}
+} */
 
 
 

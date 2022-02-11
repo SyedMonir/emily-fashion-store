@@ -114,6 +114,40 @@ window.addEventListener("scroll", percent50);
 
 
 
+
+// For Blog Slider 
+$(function () {
+    $('.blog-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<span class="priv-arrow"><i class=" fas fa-angle-left"></i></span>',
+        nextArrow: '<span class="next-arrow"><i class=" fas fa-angle-right"></i></span>'
+    });
+});
+
+
+
+
+// For Button Animation in Explorer section 
+var bttn = document.querySelectorAll('.bttn');
+bttn.forEach(bttn => {
+    bttn.onmousemove = function (e) {
+        var x = e.pageX - bttn.offsetLeft;
+        var y = e.pageY - bttn.offsetTop;
+
+        bttn.style.setProperty('--x', x + 'px');
+        bttn.style.setProperty('--y', y + 'px');
+    }
+});
+
+
+
+
+
+
+
+
 // Scroll To Top 
 
 var scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -159,6 +193,6 @@ $('.mostReviewedLinks').on('click', 'li', function () {
 //=========    Cart
 
 const cartButton = document.getElementById('cartButton');
-cartButton.addEventListener('click',function(){
+cartButton.addEventListener('click', function () {
     window.location.href = 'cart.html';
 })

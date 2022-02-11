@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./slick.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./twiter/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./font/font.css"> -->
+    <style>
+        /* testimonial carousel */
+        .carousel-control.left,
+        .carousel-control.right {
+            background: transparent;
+        }
+
+        .imgBox {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border: 5px dashed #262626;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .imgBox img {
+            width: 100%;
+        }
+
+        .carousel-inner {
+
+            background: #000;
+            padding: 45px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-caption {
+            position: static;
+            padding-bottom: 15px;
+            padding-top: 0;
+        }
+
+        .carousel-caption h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            font-family: 'Allura', cursive;
+            color: #fff;
+            text-shadow: none;
+        }
+
+        .carousel-caption h4 {
+            color: #fff;
+            text-shadow: none;
+        }
+
+        .carousel-caption p {
+            font-size: 14px;
+            margin: auto;
+            width: 70%;
+            margin-bottom: 10px;
+            font-family: 'Teko', sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow: none;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .carousel-indicators li {
+            background-color: #000;
+            width: 10px;
+            height: 10px;
+            border-radius: 0;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .carousel-indicators {
+            margin: 0 auto;
+        }
+
+        .carousel-control {
+            color: #2b2626;
+        }
+
+        .carousel-indicators .active {
+            background-color: #f74c70;
+        }
+
+        .carousel-indicators {
+            bottom: 10px;
+        }
+
+
+
+
+        
+        .clients {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: 60%;
+            height: auto;
+            transition: transform .5s ease-in;
+            margin: 8px auto;
+        }
+
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- testimonial carousel -->
+    <section class=" testomonial py-4">
+        <div class="wrapper">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="imgBox animated bounceInRight" style="animation-delay: 1s">
+                            <img src="img/face2.jpg" alt="">
+                        </div>
+                        <div class="carousel-caption animated bounceInLeft" style="animation-delay: 2s">
+                            <h3>Nicola Mustone</h3>
+                            <h4>Designer</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum molestiae id rerum
+                                dolorum temporibus accusamus similique. Saepe cum omnis nisi praesentium voluptate
+                                doloremque magnam sequi.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgBox animated bounceInRight" style="animation-delay: 1s">
+                            <img src="img/face4.jpg" alt="">
+                        </div>
+                        <div class="carousel-caption animated bounceInLeft" style="animation-delay: 2s">
+                            <h3>Nicola Mustone</h3>
+                            <h4>Designer</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum molestiae id rerum
+                                dolorum temporibus accusamus similique. Saepe cum omnis nisi praesentium voluptate
+                                doloremque magnam sequi.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgBox animated bounceInRight" style="animation-delay: 1s">
+                            <img src="img/offer1 (2).jpg" alt="">
+                        </div>
+                        <div class="carousel-caption animated bounceInLeft" style="animation-delay: 2s">
+                            <h3>Nicola Mustone</h3>
+                            <h4>Designer</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum molestiae id rerum
+                                dolorum temporibus accusamus similique. Saepe cum omnis nisi praesentium voluptate
+                                doloremque magnam sequi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- client logos section -->
+    <section class="clients py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme clients-carousel">
+                        <div class="item box">
+                            <img src="img/1.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/2.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/3.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/4.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/5.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/6.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/7.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item box">
+                            <img src="img/8.png" alt="client logo" class="client-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+   <script src="./js/jquery.min.js"></script>
+    <script src="./twiter/bootstrap.min.js"></script>
+    <script src="./home.js"></script>
+    <script src="./button.js"></script>
+    <script src="./slick.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- js for client logo -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $('.clients-carousel').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin: 15,
+            dots: false,
+            slideTransition: 'linear',
+            autoplayTimeout: 4500,
+            autoplayHoverPause: true,
+            autoplaySpeed: 4500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                500: {
+                    items: 3
+                },
+                600: {
+                    items: 4
+                },
+                800: {
+                    items: 4
+                },
+                1200: {
+                    items: 4
+                }
+
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

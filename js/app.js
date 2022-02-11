@@ -143,8 +143,26 @@ bttn.forEach(bttn => {
 
 
 
+// Search Bar 
+$(document).ready(function () {
+    $(".search").click(function () {
+        $(".search-section").toggleClass("open");
+    });
+});
 
 
+
+// Cart Count
+
+const cartCountButton = document.getElementsByClassName('cartCount');
+const cartCounter =document.getElementById('cartCounter');
+
+for (const cartCount of cartCountButton) {
+    cartCount.addEventListener('click',function(){
+        cartCounter.innerText++;
+    })
+    // console.log(cartCounter.innerText);
+}
 
 
 
@@ -161,6 +179,7 @@ function scrollFunction() {
         scrollToTopBtn.style.display = "none";
     }
 }
+
 
 function scrollToTop() {
     window.scrollTo({

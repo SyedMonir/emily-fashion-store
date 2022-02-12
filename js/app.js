@@ -26,10 +26,13 @@ for (const faHeart of faHearts) {
 
 
 
-
 // Slick Carousel 
+
+// $(".slider").not('.new-arrival').slick();
+
+// New Arrival 
 $(function () {
-    $('.new-arrival').slick({
+    $('.new-arrival').not('.slick-initialized').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -63,6 +66,115 @@ $(function () {
         ]
     });
 });
+
+// $('.thumb_images').not('.slick-initialized').slick({
+//     asNavFor: '.main_images',
+//     focusOnSelect: true,
+//     vertical: true,
+//     arrows:false,
+//     infinite: false,
+//     responsive: [
+//       {
+//         breakpoint: 481,
+//         settings: {
+//           vertical: false,
+//           infinite: true,
+//           slidesToShow: 3,
+//           slidesToScroll: 1
+
+//         }
+//       }
+//     ]
+//   });
+
+
+// blogs
+$(function () {
+    $('.blog-slider').not('.slick-initialized').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        prevArrow: '<span class="priv-arrow"><i class=" fas fa-angle-left"></i></span>',
+        nextArrow: '<span class="next-arrow"><i class=" fas fa-angle-right"></i></span>',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    // dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+});
+
+
+
+
+// Testimonial 
+$('.testimonialCarousel').not('.slick-initialized').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    speed: 400,
+    adaptiveHeight: true,
+});
+
+
+
+
+
+
+// Clients Section 
+$('.clients-carousel').owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin: 15,
+    dots: false,
+    slideTransition: 'linear',
+    autoplayTimeout: 4500,
+    autoplayHoverPause: true,
+    autoplaySpeed: 4500,
+    responsive: {
+        0: {
+            items: 2
+        },
+        500: {
+            items: 3
+        },
+        600: {
+            items: 4
+        },
+        800: {
+            items: 4
+        },
+        1200: {
+            items: 4
+        }
+
+    }
+});
+
+
 
 
 
@@ -155,10 +267,10 @@ $(document).ready(function () {
 // Cart Count
 
 const cartCountButton = document.getElementsByClassName('cartCount');
-const cartCounter =document.getElementById('cartCounter');
+const cartCounter = document.getElementById('cartCounter');
 
 for (const cartCount of cartCountButton) {
-    cartCount.addEventListener('click',function(){
+    cartCount.addEventListener('click', function () {
         cartCounter.innerText++;
     })
     // console.log(cartCounter.innerText);
@@ -173,12 +285,12 @@ var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollToTopBtn.style.display = "block";
     } else {
         scrollToTopBtn.style.display = "none";
     }
-}
+};
 
 
 function scrollToTop() {
@@ -186,7 +298,111 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     })
-}
+};
+
+
+
+
+// For Chat box 
+$(function () {
+    var INDEX = 0;
+    $("#chat-submit").click(function (e) {
+        e.preventDefault();
+        var msg = $("#chat-input").val();
+        if (msg.trim() == '') {
+            return false;
+        }
+        generate_message(msg, 'self');
+        var buttons = [
+            {
+                name: 'Existing User',
+                value: 'existing'
+            },
+            {
+                name: 'New User',
+                value: 'new'
+            }
+        ];
+        setTimeout(function () {
+            generate_message(msg, 'user');
+        }, 1000)
+
+    })
+
+    function generate_message(msg, type) {
+        INDEX++;
+        var str = "";
+        str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg " + type + "\">";
+        str += "          <span class=\"msg-avatar\">";
+        str += "            <img src='../img/modals/modal1.jpg'>";
+        str += "          <\/span>";
+        str += "          <div class=\"cm-msg-text\">";
+        str += msg;
+        str += "          <\/div>";
+        str += "        <\/div>";
+        $(".chat-logs").append(str);
+        $("#cm-msg-" + INDEX).hide().fadeIn(300);
+        if (type == 'self') {
+            $("#chat-input").val('');
+        }
+        $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight }, 1000);
+    }
+
+    function generate_button_message(msg, buttons) {
+        /* Buttons should be object array 
+          [
+            {
+              name: 'Existing User',
+              value: 'existing'
+            },
+            {
+              name: 'New User',
+              value: 'new'
+            }
+          ]
+        */
+        INDEX++;
+        var btn_obj = buttons.map(function (button) {
+            return "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\"" + button.value + "\">" + button.name + "<\/a><\/li>";
+        }).join('');
+        var str = "";
+        str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg user\">";
+        str += "          <span class=\"msg-avatar\">";
+        str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+        str += "          <\/span>";
+        str += "          <div class=\"cm-msg-text\">";
+        str += msg;
+        str += "          <\/div>";
+        str += "          <div class=\"cm-msg-button\">";
+        str += "            <ul>";
+        str += btn_obj;
+        str += "            <\/ul>";
+        str += "          <\/div>";
+        str += "        <\/div>";
+        $(".chat-logs").append(str);
+        $("#cm-msg-" + INDEX).hide().fadeIn(300);
+        $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight }, 1000);
+        $("#chat-input").attr("disabled", true);
+    }
+
+    $(document).delegate(".chat-btn", "click", function () {
+        var value = $(this).attr("chat-value");
+        var name = $(this).html();
+        $("#chat-input").attr("disabled", false);
+        generate_message(name, 'self');
+    })
+
+    $("#chat-circle").click(function () {
+        $("#chat-circle").toggle('scale');
+        $(".chat-box").toggle('scale');
+    })
+
+    $(".chat-box-toggle").click(function () {
+        $("#chat-circle").toggle('scale');
+        $(".chat-box").toggle('scale');
+    })
+
+})
 
 
 

@@ -465,7 +465,7 @@
     <div class="sticky-top ">
         <nav class="navigation navbar navbar-expand-lg navbar-light shadow py-lg-0 py-md-2 py-xm-3">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="#">
                     <img src="./img/logoAndFavicon/logo.png" alt="Emily" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -474,7 +474,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item me-lg-3 py-lg-3">
+                        <li class="nav-item me-lg-3 py-lg-3 active">
                             <a class="nav-link" href="#">HOME</a>
                         </li>
 
@@ -495,8 +495,8 @@
                                         <li><a class="dropdown-item" href="#">SUN GLASS</a></li>
                                     </div>
                                     <div class="col-6 nested-img ">
-                                        <img src="./img/a1 (2).jpg" alt="" class="img-fluid nested-imgOne ">
-                                        <img src="./img/a1 (2).jpg" alt="" class="img-fluid">
+                                        <img src="./img/modals/adModelMan1.jpg" alt="" class="img-fluid nested-imgOne ">
+                                        <img src="./img/modals/adModelMan2.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </ul>
@@ -519,8 +519,9 @@
                                         <li><a class="dropdown-item" href="#">SUN GLASS</a></li>
                                     </div>
                                     <div class="col-6 nested-img ">
-                                        <img src="./img/a1 (2).jpg" alt="" class="img-fluid nested-imgOne ">
-                                        <img src="./img/a1 (2).jpg" alt="" class="img-fluid">
+                                        <img src="./img/carousel/carousel2.jpg" alt="female1"
+                                            class="img-fluid nested-imgOne ">
+                                        <img src="./img/carousel/carousel3.jpg" alt="female2" class="img-fluid">
                                     </div>
                                 </div>
                             </ul>
@@ -543,8 +544,9 @@
                                         <li><a class="dropdown-item" href="#">Baby Pants</a></li>
                                     </div>
                                     <div class="col-6 nested-img ">
-                                        <img src="./img/a1 (2).jpg" alt="" class="img-fluid nested-imgOne ">
-                                        <img src="./img/a1 (2).jpg" alt="" class="img-fluid">
+                                        <img src="./img/modals/adModelKids1.jpg" alt="kid1"
+                                            class="img-fluid nested-imgOne ">
+                                        <img src="./img/modals/adModelKids2.jpg" alt="kid2" class="img-fluid">
                                     </div>
                                 </div>
                             </ul>
@@ -560,14 +562,24 @@
                         <li class="nav-item me-lg-3 py-lg-3">
                             <a class="nav-link" href="#">CONTACT US</a>
                         </li>
-                        <li class="nav-item py-4 px-lg-3 border-start border-end  border-4 border-md">
+                        <li class="search nav-item py-4 px-lg-3 border-start border-end border-4 ">
                             <i class="fas fa-search"></i>
                         </li>
-                        <!-- <li class="nav-item py-4 px-lg-3 border-start border-end  border-4">
+                        <!-- Search Box -->
+                        <div class="search-section">
+                            <div class="search-box">
+                                <div class="search-input">
+                                    <input type="search" placeholder="Search..." class="input-textarea">
+                                    <!-- <span><i data-feather="search" class="search-icon"></i></span>
+                                    <span><i data-feather="x-circle" class="exit-icon"></i></span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <li class="cartButtonClass nav-item py-4 px-lg-3 border-start border-end border-4">
                             <button id="cartButton" type="button" class="btn position-relative ">
                                 <i class="fab fa-opencart"></i>
                                 <span class="position-absolute  rounded-pill translate-middle badge ">
-                                    1
+                                    <span id="cartCounter">0</span>
                                     <span class="visually-hidden">New alerts</span>
                                 </span>
                             </button>
@@ -681,7 +693,8 @@
 
     <!-- Notification for promo code  -->
 
-    <div class="toast notification position-fixed align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast notification position-fixed align-items-center" role="alert" aria-live="assertive"
+        aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 Congratulation! You will get 10% discount on using <strong>syed</strong> or <strong>sanji</strong>

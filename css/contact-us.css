@@ -1,9 +1,8 @@
-@import "bootstrap.min.css";
-@import "all.min.css";
-@import "animate.css";
+@import "./bootstrap.min.css";
+@import "./all.min.css";
+@import "./animate.css";
 @import "./owl.carousel.min.css";
 @import "./owl.theme.default.css";
-@import "./bootstrap.min.css";
 
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
@@ -49,6 +48,9 @@ html:focus-within {
 
 .brand-clr {
     color: var(--brand-clr);
+}
+.zIndex {
+    z-index: 1111;
 }
 
 /* Top Nav  */
@@ -144,6 +146,9 @@ html:focus-within {
 .dropdown-item {
     font-weight: 500;
 }
+
+
+
 
 
 /*==================      MainCarousel        ===============*/

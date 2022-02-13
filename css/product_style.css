@@ -1,7 +1,7 @@
-@import "bootstrap.min.css";
-@import "all.min.css";
+@import "./bootstrap.min.css";
+@import "./all.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
-@import "quoteCarosul.css";
+/* @import "quoteCarosul.css"; */
 
 
 
@@ -743,6 +743,17 @@ input::-webkit-inner-spin-button {
 
 
 /* Responsive  */
+@media  screen and (max-width:820px) {
+  .ltg {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ltg div {
+    width: 243px;
+  }
+  .card img {
+    width: 200px
+  }
+}
 
 @media screen and (max-width:576px) {
 
@@ -754,6 +765,10 @@ input::-webkit-inner-spin-button {
   /* Nested Menu  */
   .nested-menu {
       width: 70vw;
+  }
+
+  .ltg {
+    grid-template-columns: 1fr;
   }
 
   /* Carousel  */

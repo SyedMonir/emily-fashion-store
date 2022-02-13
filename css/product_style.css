@@ -1066,6 +1066,31 @@ input::-webkit-inner-spin-button {
   .card img {
     width: 200px
   }
+
+  .grid-container {
+    width: 163px;
+  }
+
+  #card-id {
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  h6 {
+    font-size: .7rem;
+  }
+
+  h3 {
+    font-size: calc(1rem + 0.6vw);
+  }
+
+  .carousel-control-next {
+    right: -20px;
+  }
+
+  .carousel-control-prev {
+    left: 22px;
+  }
 }
 
 @media screen and (max-width:576px) {

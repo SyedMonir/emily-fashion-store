@@ -32,7 +32,7 @@ for (const faHeart of faHearts) {
 
 // New Arrival 
 $(function () {
-    $('.new-arrival').not('.slick-initialized').slick({
+    $('.new-arrival').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -67,7 +67,7 @@ $(function () {
     });
 });
 
-// $('.thumb_images').not('.slick-initialized').slick({
+// $('.thumb_images').slick({
 //     asNavFor: '.main_images',
 //     focusOnSelect: true,
 //     vertical: true,
@@ -90,7 +90,7 @@ $(function () {
 
 // blogs
 $(function () {
-    $('.blog-slider').not('.slick-initialized').slick({
+    $('.blog-slider').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -129,13 +129,13 @@ $(function () {
 
 
 // Testimonial 
-$('.testimonialCarousel').not('.slick-initialized').slick({
+$('.testimonialCarousel').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     arrows: false,
-    speed: 400,
+    speed: 300,
     adaptiveHeight: true,
 });
 

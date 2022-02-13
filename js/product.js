@@ -4,6 +4,22 @@ $(document).ready(function() {
 });
 
 
+// Search 
+const search = document.querySelector('.search');
+const searchSection = document.querySelector('.search-section');
+
+search.addEventListener('click',function(){
+   searchSection.style.display = 'block';
+});
+
+
+// Search Bar 
+$(document).ready(function () {
+    $(".search").click(function () {
+        $(".search-section").toggleClass("open");
+    });
+});
+
 
 
 

@@ -465,7 +465,7 @@
     <div class="sticky-top ">
         <nav class="navigation navbar navbar-expand-lg navbar-light shadow py-lg-0 py-md-2 py-xm-3">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" onclick="scrollToTop()">
                     <img src="./img/logoAndFavicon/logo.png" alt="Emily" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -475,33 +475,40 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item me-lg-3 py-lg-3 active">
-                            <a class="nav-link" href="#">HOME</a>
+                            <a class="nav-link" onclick="scrollToTop()" style="cursor: pointer;">HOME</a>
                         </li>
 
                         <!-- Dropdown Men  -->
                         <li class="nav-item dropdown me-lg-3 py-lg-3">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown1" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 MEN
                             </a>
                             <ul class="dropdown-menu nested-menu" aria-labelledby="navbarDropdown1">
                                 <div class="row">
                                     <div class="col-6">
-                                        <li><a class="dropdown-item" href="#">BLAZERS</a></li>
-                                        <li><a class="dropdown-item" href="#">JACKETS</a></li>
-                                        <li><a class="dropdown-item" href="#">T-SHIRT</a></li>
-                                        <li><a class="dropdown-item" href="#">JEANS PANTS</a></li>
-                                        <li><a class="dropdown-item" href="#">SPORTS SHOES</a></li>
-                                        <li><a class="dropdown-item" href="#">SUN GLASS</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">BLAZERS</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">JACKETS</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">T-SHIRT</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">JEANS PANTS</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">SPORTS SHOES</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">SUN GLASS</a></li>
                                     </div>
                                     <div class="col-6 nested-img ">
-                                        <img src="./img/modals/adModelMan1.jpg" alt="" class="img-fluid nested-imgOne ">
-                                        <img src="./img/modals/adModelMan2.jpg" alt="" class="img-fluid">
+                                        <a href="./product-details.html" target="_blank" rel="noopener noreferrer">
+                                            <img src="./img/modals/adModelMan1.jpg" alt=""
+                                                class="img-fluid nested-imgOne ">
+                                        </a>
+                                        <a href="./product-details.html" target="_blank" rel="noopener noreferrer">
+                                            <img src="./img/modals/adModelMan2.jpg" alt="" class="img-fluid">
+                                        </a>
                                     </div>
                                 </div>
                             </ul>
                         </li>
 
+
+                        
                         <!-- Dropdown Women  -->
                         <li class="nav-item dropdown me-lg-3 py-lg-3">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
@@ -511,17 +518,21 @@
                             <ul class="dropdown-menu nested-menu" aria-labelledby="navbarDropdown2">
                                 <div class="row">
                                     <div class="col-6">
-                                        <li><a class="dropdown-item" href="#">SHARI</a></li>
-                                        <li><a class="dropdown-item" href="#">BORKHA</a></li>
-                                        <li><a class="dropdown-item" href="#">HIJAB</a></li>
-                                        <li><a class="dropdown-item" href="#">SUN GLASS</a></li>
-                                        <li><a class="dropdown-item" href="#">BAG</a></li>
-                                        <li><a class="dropdown-item" href="#">SUN GLASS</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">SHARI</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">BORKHA</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">HIJAB</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">SUN GLASS</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">BAG</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">SUN GLASS</a></li>
                                     </div>
                                     <div class="col-6 nested-img ">
-                                        <img src="./img/carousel/carousel2.jpg" alt="female1"
-                                            class="img-fluid nested-imgOne ">
-                                        <img src="./img/carousel/carousel3.jpg" alt="female2" class="img-fluid">
+                                        <a href="./product-details.html" target="_blank" rel="noopener noreferrer">
+                                            <img src="./img/carousel/carousel2.jpg" alt="female1"
+                                                class="img-fluid nested-imgOne ">
+                                        </a>
+                                        <a href="./product-details.html" target="_blank" rel="noopener noreferrer">
+                                            <img src="./img/carousel/carousel3.jpg" alt="female2" class="img-fluid">
+                                        </a>
                                     </div>
                                 </div>
                             </ul>
@@ -536,17 +547,21 @@
                             <ul class="dropdown-menu nested-menu nested-menu-kid" aria-labelledby="navbarDropdown">
                                 <div class="row">
                                     <div class="col-6">
-                                        <li><a class="dropdown-item" href="#">Baby Shirt</a></li>
-                                        <li><a class="dropdown-item" href="#">Short Pants</a></li>
-                                        <li><a class="dropdown-item" href="#">Show</a></li>
-                                        <li><a class="dropdown-item" href="#">School Bag</a></li>
-                                        <li><a class="dropdown-item" href="#">Dyper</a></li>
-                                        <li><a class="dropdown-item" href="#">Baby Pants</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">Baby Shirt</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">Short Pants</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">Show</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">School Bag</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">Dyper</a></li>
+                                        <li><a class="dropdown-item" href="./products.html">Baby Pants</a></li>
                                     </div>
                                     <div class="col-6 nested-img ">
-                                        <img src="./img/modals/adModelKids1.jpg" alt="kid1"
-                                            class="img-fluid nested-imgOne ">
-                                        <img src="./img/modals/adModelKids2.jpg" alt="kid2" class="img-fluid">
+                                        <a href="./product-details.html" target="_blank" rel="noopener noreferrer">
+                                            <img src="./img/modals/adModelKids1.jpg" alt="kid1"
+                                                class="img-fluid nested-imgOne ">
+                                        </a>
+                                        <a href="./product-details.html" target="_blank" rel="noopener noreferrer">
+                                            <img src="./img/modals/adModelKids2.jpg" alt="kid2" class="img-fluid">
+                                        </a>
                                     </div>
                                 </div>
                             </ul>
@@ -554,15 +569,18 @@
 
 
                         <li class="nav-item me-lg-3 py-lg-3">
-                            <a class="nav-link" href="#">ACCESSORIES</a>
+                            <a class="nav-link" href="./products.html" target="_blank"
+                                rel="noopener noreferrer">ACCESSORIES</a>
                         </li>
                         <li class="nav-item me-lg-3 py-lg-3">
                             <a class="nav-link" href="#blogs">BLOG</a>
                         </li>
                         <li class="nav-item me-lg-3 py-lg-3">
-                            <a class="nav-link" href="#">CONTACT US</a>
+                            <a class="nav-link" href="./contact-us.html" target="_blank"
+                                rel="noopener noreferrer">CONTACT
+                                US</a>
                         </li>
-                        <li class="search nav-item py-4 px-lg-3 border-start border-end border-4 ">
+                        <li class="search nav-item py-4 px-lg-3 border-start border-end border-md-0 border-4 ">
                             <i class="fas fa-search"></i>
                         </li>
                         <!-- Search Box -->
@@ -570,25 +588,15 @@
                             <div class="search-box">
                                 <div class="search-input">
                                     <input type="search" placeholder="Search..." class="input-textarea">
-                                    <!-- <span><i data-feather="search" class="search-icon"></i></span>
-                                    <span><i data-feather="x-circle" class="exit-icon"></i></span> -->
                                 </div>
                             </div>
                         </div>
-                        <!-- <li class="cartButtonClass nav-item py-4 px-lg-3 border-start border-end border-4">
-                            <button id="cartButton" type="button" class="btn position-relative ">
-                                <i class="fab fa-opencart"></i>
-                                <span class="position-absolute  rounded-pill translate-middle badge ">
-                                    <span id="cartCounter">0</span>
-                                    <span class="visually-hidden">New alerts</span>
-                                </span>
-                            </button>
-                        </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
+
 
 
 

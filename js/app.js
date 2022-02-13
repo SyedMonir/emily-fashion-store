@@ -1,3 +1,21 @@
+// Search 
+const search = document.querySelector('.search');
+const searchSection = document.querySelector('.search-section');
+
+search.addEventListener('click',function(){
+   searchSection.style.display = 'block';
+});
+
+
+// Search Bar 
+$(document).ready(function () {
+    $(".search").click(function () {
+        $(".search-section").toggleClass("open");
+    });
+});
+
+
+
 
 // New Arrival
 
@@ -244,12 +262,7 @@ $(function () {
 
 
 
-// Search Bar 
-$(document).ready(function () {
-    $(".search").click(function () {
-        $(".search-section").toggleClass("open");
-    });
-});
+
 
 
 
@@ -263,7 +276,7 @@ for (const cartCount of cartCountButton) {
         cartCounter.innerText++;
     })
     // console.log(cartCounter.innerText);
-}
+};
 
 
 //=========    Cart
@@ -271,7 +284,7 @@ for (const cartCount of cartCountButton) {
 const cartButton = document.getElementById('cartButton');
 cartButton.addEventListener('click', function () {
     window.location.href = 'cart.html';
-})
+});
 
 
 
@@ -418,7 +431,7 @@ $(function () {
         $(".chat-box").toggle('scale');
     })
 
-})
+});
 
 
 

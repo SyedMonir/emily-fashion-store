@@ -153,6 +153,8 @@ $('.testimonialCarousel').slick({
     slidesToScroll: 1,
     autoplay: true,
     arrows: false,
+    // prevArrow: '<span class="priv-arrow"><i class=" fas fa-angle-left"></i></span>',
+    // nextArrow: '<span class="next-arrow"><i class=" fas fa-angle-right"></i></span>',
     speed: 300,
     adaptiveHeight: true,
 });
@@ -442,19 +444,19 @@ $(function () {
 // Isotope Carousel for Most Reviewed
 
 
-// var $grid = $('.mostReviewedProducts').isotope({
-//     // options
-// });
-// // filter items on button click
-// $('.mostReviewedLinks').on('click', 'li', function () {
-//     var filterValue = $(this).attr('data-filter');
-//     $grid.isotope({ filter: filterValue });
-// });
+var $grid = $('.mostReviewedProducts').isotope({
+    // options
+});
+// filter items on button click
+$('.mostReviewedLinks').on('click', 'li', function () {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+});
 
 
 
 
-// init Isotope
+// // init Isotope
 // var $grid = $('.grid').isotope({
 //     itemSelector: '.element-item',
 //     layoutMode: 'fitRows'
